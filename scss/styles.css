@@ -1,0 +1,257 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #FFEECC;
+  color: #400b44;
+  max-width: 1920px;
+}
+
+a {
+  color: #6a1371;
+  text-decoration: none;
+}
+
+/*NAVBAR*/
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 96px;
+  height: 80px;
+}
+
+nav .vocimenu a {
+  font-weight: 600;
+  padding: 8px 16px;
+}
+nav .vocimenu a:hover {
+  color: #DE4812;
+}
+
+nav .left a {
+  color: #400b44;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+nav .left {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  gap: 16px;
+}
+
+nav .left img {
+  width: 40px;
+}
+
+nav .right a {
+  color: #400b44;
+  margin: 0 10px;
+}
+nav .right a:last-child {
+  color: #FFEECC;
+  background-color: #DE4812;
+  padding: 8px 20px;
+  border-radius: 999px;
+}
+
+nav .right a:last-child:hover {
+  color: #FFEECC;
+  background-color: #400b44;
+}
+nav .right a span {
+  margin-left: 4px;
+}
+
+/* SEZIONE 1*/
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 96px;
+  margin: 64px 0;
+  gap: 40px;
+}
+.hero-section h1 {
+  font-size: 48px;
+}
+.hero-section .text .links {
+  margin-top: 24px;
+}
+.hero-section .text .links a {
+  color: #DE4812;
+  display: inline-block;
+  padding: 8px 20px;
+  border: 2px solid #DE4812;
+  border-radius: 999px;
+  margin-right: 4px;
+  margin-bottom: 10px;
+  transition: 0, 5s;
+}
+.hero-section .text .links a:hover {
+  color: #400b44;
+  border: 2px solid #400b44;
+}
+.hero-section .text {
+  flex: 9;
+}
+.hero-section .my-photo {
+  flex: 3;
+  display: flex;
+  justify-content: right;
+}
+.hero-section .my-photo img {
+  border-radius: 999px;
+  width: 350px;
+}
+
+/*SEZIONE 2 skills */
+.sezione-skills {
+  padding: 48px 96px;
+  margin-bottom: 96px;
+  background-color: #ffe4b5;
+}
+.sezione-skills h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 8px;
+}
+.sezione-skills .text {
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+.sezione-skills .caselle {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.sezione-skills .caselle .casella {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  width: 194px;
+  padding: 12px 24px;
+  margin: 8px;
+  /*border: 1.5px solid #d3d3d3;
+   border-radius:12px;*/
+}
+.sezione-skills .caselle .casella img {
+  width: 32px;
+  height: 32px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+/*SEZIONE CONTATTI*/
+.sezione-contatti {
+  padding: 0 96px;
+  margin-bottom: 96px;
+}
+.sezione-contatti h2 {
+  font-size: 36px;
+}
+.sezione-contatti .group {
+  display: flex;
+  gap: 50px;
+}
+.sezione-contatti .group .text {
+  flex: 3;
+}
+.sezione-contatti .group form {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+}
+.sezione-contatti .group form input, .sezione-contatti .group form textarea {
+  font-family: "Poppins", sans-serif;
+  border: 2px solid #6a1371;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  outline: none;
+  resize: none;
+}
+.sezione-contatti .group form button {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  color: #FFEECC;
+  background-color: #DE4812;
+  border: none;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: 0.1s;
+}
+.sezione-contatti .group form button:hover {
+  filter: brightness(0.9);
+}
+
+@media (max-width: 992px) {
+  /*sezione1*/
+  .hero-section {
+    flex-direction: column-reverse;
+  }
+  .hero-section h1 {
+    font-size: 32px;
+  }
+  .my-photo img {
+    width: 200px;
+  }
+  /*sezione-contatti*/
+  .sezione-contatti .group {
+    flex-direction: column;
+  }
+}
+@media (max-width: 768px) {
+  /*navbar*/
+  nav {
+    padding: 0 20px;
+  }
+  nav .right a {
+    font-size: 22px;
+  }
+  nav .right a:last-child {
+    color: #400b44;
+    background-color: transparent;
+    padding: 0;
+  }
+  nav .right a span {
+    display: none;
+  }
+  /*hero*/
+  .hero-section {
+    padding: 16px 32px;
+  }
+  .hero-section .text h1 {
+    font-size: 24px;
+  }
+  /*skill section*/
+  .sezione-skills {
+    padding: 16px 32px;
+  }
+  .sezione-skills h2 {
+    font-size: 24px;
+  }
+  .sezione-skills .caselle .casella span {
+    font-size: 14px;
+  }
+  /*sezione contatti*/
+  .sezione-contatti {
+    padding: 0 32px;
+  }
+  .sezione-contatti h2 {
+    font-size: 24px;
+  }
+}/*# sourceMappingURL=styles.css.map */
